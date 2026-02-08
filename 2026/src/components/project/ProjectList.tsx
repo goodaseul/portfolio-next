@@ -1,10 +1,6 @@
-import { NotionProjectItem } from "@/lib/types";
+import { ProjectItem } from "@/lib/types/models/project";
 
-export default function ProjectList({
-  projects,
-}: {
-  projects: NotionProjectItem[];
-}) {
+export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
   const WAY_LABEL: Record<string, string> = {
     personal: "개인",
     team: "협업",

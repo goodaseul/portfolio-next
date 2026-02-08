@@ -1,4 +1,3 @@
-// components/project/Tab.tsx
 import Link from "next/link";
 
 type TabItem = {

@@ -1,7 +1,8 @@
 import notion from "../notion";
-import { NotionProjectItem, ProjectPage } from "../types";
+import { ProjectItem } from "../types/models";
+import { ProjectPage } from "../types/notion";
 
-export async function getProjects(): Promise<NotionProjectItem[]> {
+export async function getProjects(): Promise<ProjectItem[]> {
   try {
     const response = await notion.databases.query({
       database_id: process.env.NOTION_DATABASE_PROJECT_ID!,

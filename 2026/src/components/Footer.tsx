@@ -1,7 +1,7 @@
-import { NotionMenuItem } from "@/lib/types";
+import { MenuItem } from "@/lib/types/models";
 import Menus from "./common/Menus";
 
-export default function Footer({ menus }: { menus: NotionMenuItem[] }) {
+export default function Footer({ menus }: { menus: MenuItem[] }) {
   return (
     <footer>
       <div className="p-6 md:p-10">

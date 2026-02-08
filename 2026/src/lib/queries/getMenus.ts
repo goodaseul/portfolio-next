@@ -1,8 +1,9 @@
 // lib/menu/getMenu.ts
 import notion from "../notion";
-import type { NotionMenuItem, MenuPage } from "../types";
+import { MenuItem } from "../types/models";
+import { MenuPage } from "../types/notion";
 
-export async function getMenus(): Promise<NotionMenuItem[]> {
+export async function getMenus(): Promise<MenuItem[]> {
   try {
     const response = await notion.databases.query({
       database_id: process.env.NOTION_DATABASE_MENU_ID!,
