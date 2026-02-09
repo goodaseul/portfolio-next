@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { FillTextLink } from "../common/FillTextLink";
 
 type TabItem = {
   label: string;
@@ -14,20 +14,27 @@ const TABS: TabItem[] = [
 
 export default function Tab({ current }: { current: string }) {
   return (
-    <ul className="grid grid-cols-3 gap-4">
+    <div className="flex gap-2">
       {TABS.map((tab) => (
-        <li
+        <FillTextLink
           key={tab.value}
-          className={`py-2
-            border border-point rounded
-            hover:bg-point transition-all
-               ${current === tab.value ? "bg-point font-medium" : ""}`}
-        >
-          <Link className="w-full h-full block text-center" href={tab.href}>
-            {tab.label}
-          </Link>
-        </li>
+          href={tab.href}
+          text={tab.label}
+          isActive={current === tab.value}
+        />
       ))}
-    </ul>
+    </div>
   );
 }
+
+// <li
+//       key={tab.value}
+//       className={`py-2
+//         border border-point rounded
+//         hover:bg-point transition-all
+//            `}
+//     >
+//       <Link className="w-full h-full block text-center" href={tab.href}>
+//         {tab.label}
+//       </Link>
+//     </li>

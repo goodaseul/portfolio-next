@@ -1,6 +1,6 @@
 "use client";
 import { MenuItem } from "@/lib/types/models";
-import { FillTextLink } from "./FillMenuLink";
+import { FillTextLink } from "./FillTextLink";
 import { usePathname } from "next/navigation";
 
 export default function Menus({ menus }: { menus: MenuItem[] }) {
