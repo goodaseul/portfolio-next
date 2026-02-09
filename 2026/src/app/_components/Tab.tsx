@@ -1,4 +1,4 @@
-import { FillTextLink } from "../common/FillTextLink";
+import { FillTextLink } from "@/components/common/FillTextLink";
 
 type TabItem = {
   label: string;
@@ -26,15 +26,3 @@ export default function Tab({ current }: { current: string }) {
     </div>
   );
 }
-
-// <li
-//       key={tab.value}
-//       className={`py-2
-//         border border-point rounded
-//         hover:bg-point transition-all
-//            `}
-//     >
-//       <Link className="w-full h-full block text-center" href={tab.href}>
-//         {tab.label}
-//       </Link>
-//     </li>

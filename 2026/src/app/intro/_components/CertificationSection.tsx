@@ -7,15 +7,17 @@ export default function CertificationSection({
 }) {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Certification</h2>
+      <h2 className="text-xl font-bold my-4">Certification</h2>
       <ul className="space-y-2">
         {items.map((item) => (
           <li
             key={item.id}
-            className="flex justify-between border border-point/50 rounded p-3"
+            className="border-b border-point/20 p-4 grid grid-cols-2 xl:grid-cols-4 gap-4"
           >
-            <span>{item.title}</span>
-            <span className="text-sm opacity-70">{item.date}</span>
+            <p>{item.title}</p>
+            <p className="text-sm opacity-70">{item.date}</p>
+            <p>{item.description}</p>
+            <p>{item.located}</p>
           </li>
         ))}
       </ul>

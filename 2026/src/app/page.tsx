@@ -1,6 +1,6 @@
-import ProjectList from "@/components/project/ProjectList";
-import Tab from "@/components/project/Tab";
 import { getProjects } from "@/lib/queries/getProjects";
+import ProjectList from "./_components/ProjectList";
+import Tab from "./_components/Tab";
 
 type SearchParamsProp = {
   way?: string;

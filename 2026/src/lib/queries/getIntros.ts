@@ -62,12 +62,18 @@ function mapEdu(pages: EducationPage[]): EducationItem[] {
 }
 
 function mapSkill(pages: SkillPage[]): SkillItem[] {
-  return pages.map((page) => ({
-    id: page.id,
-    title: page.properties.Title.title[0]?.plain_text ?? "",
-    isVisible: page.properties.IsVisible.checkbox ?? false,
-    order: page.properties.Order.number ?? 0,
-  }));
+  return [...pages]
+    .sort((a, b) => {
+      const aOrder = a.properties.Order.number ?? 0;
+      const bOrder = b.properties.Order.number ?? 0;
+      return aOrder - bOrder;
+    })
+    .map((page) => ({
+      id: page.id,
+      title: page.properties.Title.title[0]?.plain_text ?? "",
+      isVisible: page.properties.IsVisible.checkbox ?? false,
+      order: page.properties.Order.number ?? 0,
+    }));
 }
 
 export async function getIntros() {

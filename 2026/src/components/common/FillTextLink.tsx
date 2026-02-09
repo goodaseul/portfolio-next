@@ -26,9 +26,9 @@ export function FillTextLink({
         after:w-0 after:text-point
         after:transition-[width] after:duration-400 after:ease-in-out
         after:z-1
-        hover:after:w-full
-        text-2xl
-        ${isActive ? "font-extrabold italic after:italic after:w-full" : "font-medium"}`}
+        hover:after:w-[103%]
+        text-md md:text-2xl
+        ${isActive ? "font-extrabold italic after:italic after:w-[103%]" : "font-medium"}`}
     >
       {text}
     </Link>
