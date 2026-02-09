@@ -39,7 +39,10 @@ export async function getProjects(): Promise<ProjectItem[]> {
       background:
         page.properties["Background"]?.rich_text?.[0]?.plain_text ?? "",
       role: page.properties["Role"]?.rich_text?.[0]?.plain_text ?? "",
-      result: page.properties["Result"]?.rich_text?.[0]?.plain_text ?? "",
+      result:
+        page.properties["Result"]?.rich_text
+          ?.map((t) => t.plain_text)
+          .join("\n") ?? "",
     }));
 
     return projects.filter((project) => project.isVisible);

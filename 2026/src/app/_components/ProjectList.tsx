@@ -6,6 +6,7 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
     team: "협업",
   };
 
+  console.log(projects[1].result);
   return (
     <ul className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
       {projects.map((project) => (
@@ -43,7 +44,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
               {project.result}
             </p>
           </h4>
-
           {/* 기술 스택 */}
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
@@ -55,7 +55,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
               </span>
             ))}
           </div>
-
           {/* 링크 */}
           <div className="flex gap-3 mt-2">
             {project.demoUrl && (
@@ -79,7 +78,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
               </a>
             )}
           </div>
-
           <div className="text-sm text-white text-right">
             {project.startDate.slice(2)} ~ {project.endDate.slice(2)}
           </div>
