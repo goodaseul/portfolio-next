@@ -12,7 +12,7 @@ const NotoSans = Noto_Sans({
 
 export const metadata: Metadata = {
   title: "Portfolio 2026",
-  description: "Frontend Developer 정다슬",
+  description: "안녕하세요. Frontend Developer 정다슬입니다.",
 };
 
 export default async function RootLayout({
