@@ -1,6 +1,11 @@
-import { ProjectItem } from "@/lib/types/models/project";
+import { getProjects } from "@/lib/queries/getProjects";
 
-export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
+export default async function ProjectList({ tabWay }: { tabWay: string }) {
+  const projects = await getProjects();
+  const filteredProjects =
+    tabWay === "all"
+      ? projects
+      : projects.filter((project) => project.way.includes(tabWay));
   const WAY_LABEL: Record<string, string> = {
     personal: "개인",
     team: "협업",
@@ -8,7 +13,7 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
 
   return (
     <ul className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
-      {projects.map((project) => (
+      {filteredProjects.map((project) => (
         <li
           key={project.id}
           className="border bg-point/10 border-point/50 rounded-lg p-6 flex flex-col gap-2"
@@ -43,7 +48,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
               {project.result}
             </p>
           </h4>
-          {/* 기술 스택 */}
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
               <span
@@ -54,7 +58,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
               </span>
             ))}
           </div>
-          {/* 링크 */}
           <div className="flex gap-3 mt-2">
             {project.demoUrl && (
               <a
