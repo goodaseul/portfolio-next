@@ -8,7 +8,7 @@ Notion API를 활용해 **필요한 데이터만 선별적으로 사용**하는 
 ## 🔗 Demo
 
 - Demo: [데모 바로가기](https://portfolio-front-nine.vercel.app/)
-- GitHub: [(github 바로가기)](https://github.com/goodaseul/portfolio-next)
+- GitHub: [github 바로가기](https://github.com/goodaseul/portfolio-next)
 
 ---
 
