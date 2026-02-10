@@ -15,7 +15,9 @@ export default function EducationSection({
               <p>{item.title}</p>
               <p className="text-sm opacity-70">{item.date}</p>
             </div>
-            <p className="w-full sm:w-1/2 xl:w-[75%]">{item.description}</p>
+            <p className="w-full sm:w-1/2 xl:w-[75%] whitespace-pre-line break-keep">
+              {item.description}
+            </p>
           </li>
         ))}
       </ul>

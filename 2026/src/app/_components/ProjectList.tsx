@@ -6,7 +6,6 @@ export default function ProjectList({ projects }: { projects: ProjectItem[] }) {
     team: "협업",
   };
 
-  console.log(projects[1].result);
   return (
     <ul className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
       {projects.map((project) => (

@@ -1,6 +1,7 @@
 import { getProjects } from "@/lib/queries/getProjects";
 import ProjectList from "./_components/ProjectList";
 import Tab from "./_components/Tab";
+import ProgressBar from "@/components/common/ProgressBar";
 
 type SearchParamsProp = {
   way?: string;
@@ -20,11 +21,14 @@ export default async function Home({
       : projects.filter((project) => project.way.includes(tabWay));
 
   return (
-    <section className="p-6 md:p-10">
-      <div>
-        <Tab current={tabWay} />
-        <ProjectList projects={filteredProjects} />
-      </div>
-    </section>
+    <>
+      <ProgressBar />
+      <section className="p-6 md:p-10">
+        <div>
+          <Tab current={tabWay} />
+          <ProjectList projects={filteredProjects} />
+        </div>
+      </section>
+    </>
   );
 }
