@@ -48,6 +48,6 @@ export async function getProjects(): Promise<ProjectItem[]> {
     return projects.filter((project) => project.isVisible);
   } catch (error) {
     console.error("Failed to fetch projects:", error);
-    return [];
+    throw error;
   }
 }

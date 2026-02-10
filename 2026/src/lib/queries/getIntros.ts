@@ -100,8 +100,8 @@ export async function getIntros() {
       skill,
       education,
     };
-  } catch (e) {
-    console.error("Failed to fetch intros:", e);
-    return { info: [], work: [], certification: [], skill: [], education: [] };
+  } catch (error) {
+    console.error("Failed to fetch intros:", error);
+    throw error;
   }
 }
