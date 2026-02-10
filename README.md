@@ -8,7 +8,7 @@ Notion API를 활용해 **필요한 데이터만 선별적으로 사용**하는 
 ## 🔗 Demo
 
 - Demo: [데모 바로가기](https://portfolio-front-nine.vercel.app/)
-- GitHub: [github 바로가기](https://github.com/goodaseul/portfolio-next)
+- GitHub: [GitHub 바로가기](https://github.com/goodaseul/portfolio-next)
 
 ---
 
@@ -19,7 +19,6 @@ Notion API를 활용해 **필요한 데이터만 선별적으로 사용**하는 
 - Notion API
 - Tailwind CSS
 - Vercel
-- GitHub Actions
 
 ---
 
@@ -74,6 +73,5 @@ Notion API를 활용해 **필요한 데이터만 선별적으로 사용**하는 
 
 ## 🚀 배포 및 운영
 
-- Vercel을 통한 서비스 배포
-- GitHub Actions를 통한 CI/CD 자동화 파이프라인 구축
-- main 브랜치 push 시 자동 빌드 및 배포
+- Vercel과 GitHub 레포지토리를 연동하여 자동 배포 구성
+- main 브랜치에 push 시 Vercel에서 자동으로 빌드 및 배포
