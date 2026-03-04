@@ -7,6 +7,7 @@ export type InfoPageProperties = {
   Info: {
     rich_text: { plain_text: string }[];
   };
+  IsVisible: { checkbox: boolean };
 };
 
 export type InfoPage = Omit<PageObjectResponse, "properties"> & {

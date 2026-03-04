@@ -30,6 +30,7 @@ function mapInfo(pages: InfoPage[]): InfoItem[] {
     id: page.id,
     title: page.properties.Title.title[0]?.plain_text ?? "",
     info: page.properties.Info.rich_text[0]?.plain_text ?? "",
+    isVisible: page.properties.IsVisible.checkbox ?? false,
   }));
 }
 
