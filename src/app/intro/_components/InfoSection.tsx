@@ -1,10 +1,11 @@
 import { InfoItem } from "@/lib/types/models";
+import IntroTitle from "./IntroTitle";
 
 export default function InfoSection({ items }: { items: InfoItem[] }) {
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Info</h2>
-      <ul className="space-y-2">
+    <div className="mb-10">
+      <IntroTitle>Info</IntroTitle>
+      <ul className="space-y-2 text-lg">
         {items.map((item) => {
           const isUrl = item.info.startsWith("https://");
           const isEmail = item.info.includes("@");
